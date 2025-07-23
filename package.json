@@ -1,0 +1,15 @@
+{
+  "name": "clone-tabnews",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A clone of tabnews.com.br",
+  "author": "Isaac 'H3rmel' Reginato (isaach3rmel@gmail.com)",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+}
