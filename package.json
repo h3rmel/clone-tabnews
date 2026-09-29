@@ -7,16 +7,17 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
-    "dev": "npm run services:up && next dev",
-    "services:up": "docker compose -f compose.yaml up -d",
-    "services:stop": "docker compose -f compose.yaml stop",
-    "services:down": "docker compose -f compose.yaml down",
+    "dev": "npm run services:up && npm run wait-for-postgres && npm run migrations:up && next dev",
+    "services:up": "docker compose -f infra/compose.yaml up -d",
+    "services:stop": "docker compose -f infra/compose.yaml stop",
+    "services:down": "docker compose -f infra/compose.yaml down",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest --runInBand",
     "test:watch": "jest --watchAll --runInBand",
     "migrations:create": "node-pg-migrate -m infra/migrations create",
-    "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up"
+    "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
+    "wait-for-postgres": "node infra/scripts/wait-for-postgres.js"
   },
   "dependencies": {
     "dotenv": "16.4.4",
