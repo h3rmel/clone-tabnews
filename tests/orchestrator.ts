@@ -17,7 +17,9 @@ async function waitForWebServer() {
 async function fetchStatusPage() {
   const response = await fetch(`${baseUrl}/api/v1/status`);
 
-  await response.json();
+  if (response.status !== 200) {
+    throw new Error();
+  }
 }
 
 async function cleanDatabase() {
