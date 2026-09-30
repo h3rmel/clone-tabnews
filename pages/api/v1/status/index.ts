@@ -22,7 +22,6 @@ export default async function handler(
     values: [databaseName],
   });
   const openedConnections = openedConnectionsResult.rows[0].count;
-
   // #endregion
 
   return response
