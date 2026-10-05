@@ -1,7 +1,7 @@
 import retry from "async-retry";
-import database from 'infra/database';
+import database from "infra/database";
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = "http://localhost:3000";
 
 async function waitForAllServices() {
   await waitForWebServer();

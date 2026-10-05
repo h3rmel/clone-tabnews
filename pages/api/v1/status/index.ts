@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import database from 'infra/database';
+import database from "infra/database";
 
 export default async function handler(
   request: NextApiRequest,
@@ -24,16 +24,14 @@ export default async function handler(
   const openedConnections = openedConnectionsResult.rows[0].count;
   // #endregion
 
-  return response
-    .status(200)
-    .json({
-      updated_at: updatedAt,
-      dependencies: {
-        database: {
-          version: databaseVersion,
-          max_connections: maxConnections,
-          opened_connections: openedConnections,
-        },
-      }
-    });
+  return response.status(200).json({
+    updated_at: updatedAt,
+    dependencies: {
+      database: {
+        version: databaseVersion,
+        max_connections: maxConnections,
+        opened_connections: openedConnections,
+      },
+    },
+  });
 }
