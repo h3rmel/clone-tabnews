@@ -1,5 +1,5 @@
 import retry from "async-retry";
-import database from "infra/database";
+import * as database from "infra/database";
 
 const baseUrl = "http://localhost:3000";
 

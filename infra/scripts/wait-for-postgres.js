@@ -13,7 +13,7 @@ function checkPostgresConnection() {
     exec("docker exec postgres-dev pg_isready --host localhost", handleReturn);
   }, POLL_INTERVAL_MS);
 
-  function handleReturn(error, stdout, stderr) {
+  function handleReturn(error, stdout) {
     if (stdout.search("accepting connections") !== -1) {
       clearInterval(intervalId);
       process.stdout.write("\rPostgres is ready and accepting connections.\n");
