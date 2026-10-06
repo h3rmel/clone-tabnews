@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import database from "infra/database";
+import * as database from "infra/database";
 
 export default async function handler(
   request: NextApiRequest,

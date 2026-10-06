@@ -33,7 +33,4 @@ async function query(queryObject: string | { text: string; values: any[] }) {
   }
 }
 
-export default {
-  query,
-  createNewClient,
-};
+export { query, createNewClient };
