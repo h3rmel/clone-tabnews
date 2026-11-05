@@ -22,7 +22,8 @@
     "migrations:create": "node-pg-migrate -m infra/migrations create",
     "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "wait-for-postgres": "node infra/scripts/wait-for-postgres.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "cz"
   },
   "dependencies": {
     "@types/async-retry": "1.4.9",
@@ -43,7 +44,9 @@
     "@types/pg": "8.11.2",
     "@types/react": "19.1.8",
     "@typescript-eslint/eslint-plugin": "5.62.0",
+    "commitizen": "4.3.0",
     "concurrently": "8.2.2",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "13.1.6",
     "eslint-config-prettier": "9.1.0",
@@ -53,5 +56,10 @@
     "prettier": "^3.6.2",
     "typescript": "5.8.3"
   },
-  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
