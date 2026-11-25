@@ -1,5 +1,5 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export default function Page(): React.ReactNode {
-  return <div>Status</div>;
+export default function Page(): ReactNode {
+  return <main>Status</main>;
 }

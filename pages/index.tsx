@@ -1,5 +1,5 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export default function Page(): React.ReactNode {
+export default function Page(): ReactNode {
   return <div>Te amo gatinha 💘</div>;
 }
