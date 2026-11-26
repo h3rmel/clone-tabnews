@@ -12,8 +12,8 @@ type StatusResponse = {
   };
 };
 
-async function fetchAPI(apiRoute: string) {
-  const response = await fetch(`http://localhost:3000/${apiRoute}`);
+async function fetchAPI(key: string) {
+  const response = await fetch(key);
 
   return response.json();
 }
